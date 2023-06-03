@@ -69,4 +69,68 @@ h1 {
 
 #projects {
     background-color: cyan;
+    text-align: center;
+
+}
+
+.grid-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr;
+    grid-template-areas: 
+    "first-project second-project"
+    "third-project forth-project";
+}
+
+/* Added different background colors to see grid better. */
+#first-project {  
+    background: teal;
+    grid-area: first-project;
+
+}
+
+#second-project {
+    background: turquoise;
+    grid-area: second-project;
+}
+
+#third-project {
+    background: green;
+    grid-area: third-project;
+}
+
+#forth-project {
+    background: greenyellow;
+    grid-area: forth-project;
+}
+
+@media only screen and (max-width:600px) {
+    .grid-projects {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "first-project"
+        "second-project"
+        "third-project"
+        "forth-project";
+    }
+}
+#contact {
+    width: auto;
+    height: 90vh;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: grey;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+.links a:hover {
+        text-indent: 5rem;
+        
 }
